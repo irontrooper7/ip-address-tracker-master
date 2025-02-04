@@ -1,14 +1,12 @@
 import Layout from "@/components/Layout";
+import Tracker from "@/components/Tracker";
 
 export default function Home() {
 	return (
 		<Layout>
-			<section className="hero is-danger is-fullheight">
+			<section className="hero">
 				<div className="hero-body">
-					<div className="">
-						<h1>IP Address Tracker</h1>
-						<p className="subtitle">Fullheight subtitle</p>
-					</div>
+					<Tracker />
 				</div>
 			</section>
 		</Layout>
