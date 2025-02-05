@@ -4,11 +4,7 @@ import Tracker from "@/components/Tracker";
 export default function Home() {
 	return (
 		<Layout>
-			<section className="hero">
-				<div className="hero-body">
-					<Tracker />
-				</div>
-			</section>
+			<Tracker />
 		</Layout>
 	);
 }

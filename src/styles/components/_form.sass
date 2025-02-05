@@ -1,0 +1,56 @@
+@use '../base/_colors' as *
+
+.form
+	.field
+		margin: 0 auto 20px
+		max-width: 450px
+		position: relative
+		.help
+			position: absolute
+			bottom: -20px
+			left: 1rem
+			margin: 0px
+		.control
+			position: relative
+			border-radius: 15px
+			overflow: hidden
+			.input
+				padding-top: 12px
+				padding-bottom: 12px
+				padding-left: 1rem
+				height: inherit
+				border-radius: 0px
+				&:focus
+					border-color: transparent
+			.button
+				position: absolute
+				top: 0
+				right: 0
+				border-radius: 0
+				border: none
+				height: 100%
+				padding: 0px
+				width: 50px
+				background: $black
+				color: $white
+				&:hover
+					background: $dark_gray
+				svg
+					width: 30px
+					height: 30px
+
+@mixin form-desktop
+	.form
+		.field
+			margin: 0 auto 30px
+
+@mixin form-dark-mode
+	.form
+		.field
+			.control
+				.button
+					background: $gray
+					color: $dark_gray
+					&:hover
+						background: $dark_gray
+						color: $gray

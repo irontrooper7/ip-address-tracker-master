@@ -1,0 +1,10 @@
+@use '../../../node_modules/bulma/sass/utilities/css-variables' as cv
+@use '../components/_form' as *
+@use '../base/_base' as *
+
+@include cv.system-theme($name: "dark")
+	@include base-dark-mode
+	@include form-dark-mode
+
+// @media (prefers-color-scheme: dark)
+// 	@include form-dark-mode
