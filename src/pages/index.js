@@ -1,7 +1,10 @@
-import Map from "@/components/Map";
+'use client'
+import dynamic from "next/dynamic";
 import Tracker from "@/components/Tracker";
 
-export default function Home() {
+const Map = dynamic(() => import('../components/Map'), { ssr:false })
+
+const Home = () => {
 	return (
 		<main>
 			<Tracker />
@@ -9,3 +12,5 @@ export default function Home() {
 		</main>
 	);
 }
+
+export default Home

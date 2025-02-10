@@ -4,10 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>IP Address Tracker</title>
-        <meta name="description" content='IP Address Tracker' />
+        {/* <title>/title> */}
+        {/* <meta name="description" content='IP Address Tracker' />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.png" /> */}
       </Head>
       <body>
         <Main />

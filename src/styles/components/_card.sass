@@ -7,9 +7,12 @@
 		.columns
 			margin: 0px
 			.column
+				margin-bottom: 16px
+				padding: 0px
 				position: relative
-				padding: 16px
 				text-align: center
+				&:last-child
+					margin-bottom: 0px
 
 @mixin card-desktop
 	.card
@@ -20,6 +23,7 @@
 				.column
 					text-align: left
 					padding: 16px 30px
+					margin: 0px
 					&::before
 						background: $gray
 						content: ''
