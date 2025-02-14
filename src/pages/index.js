@@ -8,7 +8,7 @@ const Home = () => {
 			<Tracker />
 			<Map />
 		</main>
-	);
+	)
 }
 
 export default Home

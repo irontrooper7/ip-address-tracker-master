@@ -7,7 +7,7 @@ import { Icon } from 'leaflet';
 const customIcon = new Icon({
 	iconUrl: "/assets/icon-location.svg",
 	iconSize: [46, 56]
-});
+})
 
 function MapUpdater({ center }) {
 	const map = useMap();
