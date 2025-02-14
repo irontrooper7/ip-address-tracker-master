@@ -14,18 +14,20 @@ export default function TrackerForm() {
 	return (
 		<div className="form">
 			<Formik
-				initialValues={{ ipAddress: '' }}
-				validationSchema={IPAddressTrackerSchema}
-				onSubmit={async (values) => {
+				initialValues = {{ ipAddress: '' }}
+				validationSchema = { IPAddressTrackerSchema }
+				onSubmit={async (values, {resetForm}) => {
 					let ipAddress = values.ipAddress;
 					let key = process.env.NEXT_PUBLIC_API_KEY;
 					await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${key}&ipAddress=${ipAddress}`)
 						.then(res => res.json())
 						.then(res => {
-							addToCoordinates(res)
+							addToCoordinates(res);
+							resetForm();
 						})
 						.catch(error => {
 							console.log('Error: ' + error);
+							resetForm();
 						});
 				}}
 			>
